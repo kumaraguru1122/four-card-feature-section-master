@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray);
+}
+main {
+  margin: 4em 2em;
+  /* height: 100vh; */
+  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  padding: 1em;
+  margin-bottom: 2.5em;
+  max-width: 500px;
+}
+.text {
+  text-align: center;
+}
+.text h1 {
+  font-weight: lighter;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 0.2em;
+}
+.text h2 {
+  font-size: 30px;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 0.6em;
+}
+.text p {
+  color: var(--Grayish-Blue);
+}
+.hero-section {
+  grid-column: span 3;
+  grid-auto-flow: row;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr;
+  gap: 3em;
+}
+.contents {
+  background-color: white;
+  height: 230px;
+  max-width: 330px;
+  box-shadow: 0px 7px 14px 0px rgb(0 0 0 / 19%);
+  border-radius: 5px;
+  padding: 1.5em;
+  display: grid;
+  grid-template-rows: 2fr 1fr 5fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.contents h3 {
+  color: var(--Very-Dark-Blue);
+}
+.contents p {
+  color: var(--Grayish-Blue);
+}
+.contents img {
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: auto;
+  height: 55px;
+}
+
+.supervisor {
+  grid-row: span 2;
+  border-top: 4px solid var(--Cyan);
+}
+.team-builder {
+  border-top: 4px solid var(--Red);
+}
+.karma {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  border-top: 4px solid var(--Orange);
+}
+.calculator {
+  border-top: 4px solid var(--Blue);
+  grid-row: span 2;
+}
+@media screen and (max-width: 430px) {
+  header {
+    grid-column: span 3;
+    width: 100vb;
+    max-width: 350px;
+  }
+  .text h1 {
+    font-size: 25px;
+  }
+  .text h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .contents {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
